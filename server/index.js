@@ -4,6 +4,7 @@ import mongoose from "mongoose";
 import dotenv from "dotenv";
 import chalk from "chalk";
 import AuthRoute from "./Routes/AuthRoute.js";
+import UserRoute from "./Routes/UserRoute.js";
 
 // Routes
 const app = express();
@@ -40,3 +41,4 @@ start();
 // usage of routes
 
 app.use("/auth", AuthRoute);
+app.use("/user", UserRoute);
