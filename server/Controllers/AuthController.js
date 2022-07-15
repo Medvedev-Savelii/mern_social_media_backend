@@ -8,7 +8,7 @@ export const registerUser = async (req, res) => {
   const salt = await bcrypt.genSalt(10);
   const hashedPass = await bcrypt.hash(password, salt);
 
-  const newUser = new UserModel.create({
+  const newUser = new UserModel({
     username,
     password: hashedPass,
     firstname,
