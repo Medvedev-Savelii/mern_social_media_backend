@@ -5,6 +5,7 @@ import dotenv from "dotenv";
 import chalk from "chalk";
 import AuthRoute from "./Routes/AuthRoute.js";
 import UserRoute from "./Routes/UserRoute.js";
+import PostRoute from "./Routes/UserRoute.js";
 
 // Routes
 const app = express();
@@ -42,3 +43,4 @@ start();
 
 app.use("/auth", AuthRoute);
 app.use("/user", UserRoute);
+app.use("/post", PostRoute);
